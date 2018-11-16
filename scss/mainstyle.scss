@@ -50,7 +50,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       h1 {
-        font-size: 50px;
+        font-size: 3rem;
         color: white;
         overflow: hidden;
         border-right: 0.15em solid white;
@@ -71,19 +71,21 @@ body {
       border-radius: 50%;
       @include bg-image("./../assets/pro-pic.jpg");
     }
+
     .profile-desc {
       margin: $center-horizontal;
       margin-top: 25px;
       width: fit-content;
       color: #00004d;
-      font-size: 16px;
+      font-size: 1rem;
       text-align: center;
       line-height: 1.5em;
       .profile-name {
-        font-size: 18px;
+        font-size: 1.25rem;
         font-weight: 600;
       }
     }
+
     .social-media {
       width: fit-content;
       margin: $center-horizontal;
@@ -95,6 +97,36 @@ body {
         margin: 0 10px;
         cursor: pointer;
         @extend %zoom-in-effect;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    .banner {
+      .greetings {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+    .about {
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+      }
+      .profile-desc {
+        font-size: 0.75rem;
+        .profile-name {
+          font-size: 1rem;
+        }
+      }
+      .social-media {
+        img {
+          width: 25px;
+          height: 25px;
+        }
       }
     }
   }
